@@ -1,0 +1,136 @@
+{
+    "name": "kongzi-companion",
+    "displayName": "孔子工作陪伴",
+    "description": "让至圣先师孔子以文言美学与君子之道陪伴你的 VS Code 工作之旅",
+    "version": "0.1.0",
+    "publisher": "kongzi-studio",
+    "license": "MIT",
+    "icon": "media/kongzi-icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/example/kongzi-companion.git"
+    },
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint src --ext ts"
+    },
+    "contributes": {
+        "commands": [
+            {
+                "command": "kongzi.openStage",
+                "title": "孔子：今日讲学",
+                "category": "Kongzi"
+            },
+            {
+                "command": "kongzi.startPomodoro",
+                "title": "孔子：开始修身专注",
+                "category": "Kongzi"
+            },
+            {
+                "command": "kongzi.stopPomodoro",
+                "title": "孔子：结束修身专注",
+                "category": "Kongzi"
+            },
+            {
+                "command": "kongzi.encourageMe",
+                "title": "孔子：为我鼓劲",
+                "category": "Kongzi"
+            },
+            {
+                "command": "kongzi.reviewWork",
+                "title": "孔子：正名审代码",
+                "category": "Kongzi"
+            },
+            {
+                "command": "kongzi.finale",
+                "title": "孔子：今日收工",
+                "category": "Kongzi"
+            },
+            {
+                "command": "kongzi.liuyi",
+                "title": "孔子：谈谈六艺",
+                "category": "Kongzi"
+            },
+            {
+                "command": "kongzi.lunyu",
+                "title": "孔子：论语一则",
+                "category": "Kongzi"
+            },
+            {
+                "command": "kongzi.disciple",
+                "title": "孔子：聊聊弟子",
+                "category": "Kongzi"
+            },
+            {
+                "command": "kongzi.switchMode",
+                "title": "孔子：切换说话风格",
+                "category": "Kongzi"
+            }
+        ],
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "kongzi-companion",
+                    "title": "杏坛书院",
+                    "icon": "media/kongzi-icon.svg"
+                }
+            ]
+        },
+        "views": {
+            "kongzi-companion": [
+                {
+                    "type": "webview",
+                    "id": "kongzi.chatPanel",
+                    "name": "杏坛书院"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "孔子工作陪伴",
+            "properties": {
+                "kongzi.pomodoroMinutes": {
+                    "type": "number",
+                    "default": 25,
+                    "description": "修身专注时长（分钟）"
+                },
+                "kongzi.breakMinutes": {
+                    "type": "number",
+                    "default": 5,
+                    "description": "休憩时长（分钟）"
+                },
+                "kongzi.enableIdleReminder": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "是否在长时间未操作时提醒"
+                },
+                "kongzi.idleMinutes": {
+                    "type": "number",
+                    "default": 30,
+                    "description": "闲置多少分钟后提醒"
+                },
+                "kongzi.enableStatusBar": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "是否在状态栏显示孔子"
+                }
+            }
+        }
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "@types/vscode": "^1.85.0",
+        "typescript": "^5.3.3"
+    }
+}
