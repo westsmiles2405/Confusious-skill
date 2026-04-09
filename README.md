@@ -4,6 +4,8 @@
 [![VS Code](https://img.shields.io/badge/VS%20Code-%5E1.85.0-007ACC?logo=visual-studio-code)](https://code.visualstudio.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript)](https://www.typescriptlang.org/)
 
+> [🇬🇧 English Version](README_EN.md)
+
 > *"学而时习之，不亦说乎？有朋自远方来，不亦乐乎？"*
 
 让至圣先师 **孔子** 以文言美学与君子之道陪伴你的 VS Code 工作之旅。他会用经典文言句式鼓励你、以仁义礼智信审视你的代码、在你疲惫时以论语智慧温和抚慰，还会谈六艺、讲弟子故事，让你在编程中感悟两千五百年前的教育哲学。
